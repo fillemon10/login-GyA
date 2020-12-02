@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7f3cf99621.js" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="678664224665-ootkb0e7t799f7138638p6dovbqndvkh.apps.googleusercontent.com">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="login-header">Login</h1>
+        <div class="card bg-light login-form">
+            <div class="row login-row">
+                <div class="col d-flex flex-column social-login">
+                    <button class="btn btn-primary login-fb"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
+                    <button class="btn btn-outline-warning login-google"><i class="fab fa-google"></i>Login with Google</button>
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <button class="btn btn-primary login-bankid">Login with BankID</button>
+
+                </div>
+                <div class="col">
+                    <form action="account.php" method="post" class="form-horizontal">
+                        <section>
+                            <div class="form-group username">
+                                <label class="control-label" for="username">Username</label>
+                                <input class="form-control" type="text" placeholder="Enter Username" name="username" required autofocus>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="form-group password">
+                                <label class="control-label" for="password">Password</label>
+                                <input class="form-control" type="password" placeholder="Enter Password" name="password" required>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">Login</button>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me?
+                                </label>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="form-group float-right">
+                                <button class="btn btn-link forgot-password">
+                                    <a href="forgot-password.php">Forgot Password?</a>
+                                </button>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
